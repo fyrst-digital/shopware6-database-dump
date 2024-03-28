@@ -157,7 +157,7 @@ done
 # Program Functions
 ###############################################################################
 
-_dump() {}
+_dump() {
   _FILENAME="${_DATABASE}-dump-$(date +%Y-%m-%d-%H%M%S).sql"
 
   printf ">> Creating structure dump...\\n"
