@@ -67,12 +67,9 @@ _print_help() {
 Dumps a Shopware 6 database with a bit of cleanup and a GDPR mode ignoring more data.
 
 Usage:
-  ${_ME} [filename.sql] --database db_name --user username [--host 127.0.0.1] [--port 3306] [--gdpr]
-  ${_ME} [filename.sql] -d db_name -u username [-H 127.0.0.1] [-p 3306] [--gdpr]
+  ${_ME} --database db_name --user username [--host 127.0.0.1] [--port 3306] [--gdpr]
+  ${_ME} -d db_name -u username [-H 127.0.0.1] [-p 3306] [--gdpr]
   ${_ME} -h | --help
-
-Arguments:
-  filename.sql   Set output filename, will be gzipped, dump.sql by default
 
 Options:
   -h --help      Display this help information.
@@ -160,8 +157,8 @@ done
 # Program Functions
 ###############################################################################
 
-_dump() {
-  _FILENAME=${1:-dump.sql}
+_dump() {}
+  _FILENAME="${_DATABASE}-dump-$(date +%Y-%m-%d-%H%M%S).sql"
 
   printf ">> Creating structure dump...\\n"
 

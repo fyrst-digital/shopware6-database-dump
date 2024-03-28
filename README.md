@@ -30,7 +30,7 @@ Options:
   --gdpr         Enable GDPR data filtering
 ```
 
-Your dump will be written to `dump.sql.gz`.
+Your dump will be written to `db_name-dump-YYYY-MM-DD-HMS.sql.gz`.
 
 ## License
 MIT
