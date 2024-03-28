@@ -32,5 +32,10 @@ Options:
 
 Your dump will be written to `db_name-dump-YYYY-MM-DD-HMS.sql.gz`.
 
+## Import dump
+``` bash
+zcat /path/to/file.sql.gz | mysql -u user -p db_name
+```
+
 ## License
 MIT
